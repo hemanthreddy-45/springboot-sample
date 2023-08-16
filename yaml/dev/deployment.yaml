@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: demo-namespace
+ # name: demo-namespace
  
 ---
 apiVersion: v1
@@ -11,7 +11,7 @@ kind: Secret
 metadata:
   creationTimestamp: null
   name: docker-nexus
-  namespace: demo-namespace
+  #namespace: demo-namespace
 type: kubernetes.io/dockerconfigjson
   
 ---
@@ -19,7 +19,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: argo-demo
-  namespace: demo-namespace
+ # namespace: demo-namespace
 spec:
   replicas: 1
   selector:
@@ -49,7 +49,7 @@ metadata:
   labels:
     app.kubernetes.io/name: argo-demo
   name: argo-demo
-  namespace: demo-namespace
+ # namespace: demo-namespace
 spec:
   ports:
   - name: http
@@ -70,7 +70,7 @@ metadata:
   labels:
     name: argo-demo
   name: argo-demo
-  namespace: demo-namespace
+ # namespace: demo-namespace
 spec:
   rules:
   - http:
