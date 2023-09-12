@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: back-end
-          image: 792373136340.dkr.ecr.ap-south-1.amazonaws.com/anchore-demo:20230905104333
+          image: 792373136340.dkr.ecr.ap-south-1.amazonaws.com/anchore-demo:20230912070053
           ports:
             - containerPort: 8072
           env:
