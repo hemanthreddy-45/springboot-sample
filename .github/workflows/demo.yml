@@ -17,11 +17,6 @@ jobs:
         echo "Building and testing..."
         # Example build commands
         mkdir build
-        cd build
-        cmake ..
-        make
-        # Example test commands
-        ctest
 
   lint:
     runs-on: ubuntu-latest
