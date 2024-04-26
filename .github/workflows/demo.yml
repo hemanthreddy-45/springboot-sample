@@ -1,0 +1,54 @@
+name: Multiple Jobs Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Build and Test
+      run: |
+        echo "Building and testing..."
+        # Example build commands
+        mkdir build
+        cd build
+        cmake ..
+        make
+        # Example test commands
+        ctest
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        echo "Installing dependencies..."
+        # Example dependency installation commands
+        apt-get update
+        apt-get install -y python3
+        pip3 install pylint
+
+    - name: Lint code
+      run: |
+        echo "Linting code..."
+        # Example linting command
+        pylint src/*.py
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Package code
+      run: |
+        echo "Packaging code..."
+        # Example packaging commands
+        tar -czvf myapp.tar.gz src/ public/ config/
