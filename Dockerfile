@@ -14,3 +14,4 @@ COPY --from=build /home/app/target/spring-boot-example-0.0.1-SNAPSHOT.jar /usr/l
 RUN rm -rf /home/app
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/local/lib/demo.jar"]
+#
