@@ -27,5 +27,5 @@ jobs:
           password: XlQM2gXFC9
       - name: Tag and Push Docker image to Nexus Repository
         run: |
-          docker tag hello1:tag1 8083-nexus-tecdmwng.ldapowner.opsera.io/docker-repo:newtag
-          docker push 8083-nexus-tecdmwng.ldapowner.opsera.io/docker-repo:newtag
+          docker tag hello1:tag1 8083-nexus-tecdmwng.ldapowner.opsera.io/new-repo:newtag
+          docker push 8083-nexus-tecdmwng.ldapowner.opsera.io/new-repo:newtag
