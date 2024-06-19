@@ -5,6 +5,9 @@ resources:
 - nginx-deployment.yaml
 - nginx-svc.yaml
 images:
+- name: docker-h
+  newName: 8083-nexus-tecdmwng.ldapowner.opsera.io/docker-repo
+  newTag: myapp-latest
 - name: nginx
   newName: 8083-nexus-tecdmwng.ldapowner.opsera.io/docker-repo
   newTag: myapp-latest
