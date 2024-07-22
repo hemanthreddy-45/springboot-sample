@@ -1,6 +1,9 @@
 # Use a base image
 FROM alpine:latest
-
+RUN pip install mkdocs-material
+RUN pip install mkdocstrings
+RUN pip install mkdocs-glightbox
+RUN pip install mkdocs-mkdocstrings-python
 # Set a default value for the environment variable
 ENV MY_VARIABLE=default_value
 
